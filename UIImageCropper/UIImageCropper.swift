@@ -213,7 +213,8 @@ public class UIImageCropper: UIViewController, UIImagePickerControllerDelegate, 
         let vertical = NSLayoutConstraint.constraints(withVisualFormat: "V:|-(<=\(cropView.frame.origin.y))-[view]-(<=\(cropView.frame.origin.y))-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["view": imageView])
         topView.addConstraints(horizontal + vertical)
         
-        maskFadeView()
+        //turning off the masking which causes a bug in some newer phones
+//        maskFadeView()
         orgWidth = imageWidthConst!.constant
         orgHeight = imageHeightConst!.constant
     }

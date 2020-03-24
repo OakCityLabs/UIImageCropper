@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func cropExistingImage(_ sender: Any) {
-        let cropper = UIImageCropper(cropRatio: 2/3)
+        let cropper = UIImageCropper(cropRatio: 16 / 9)
         cropper.delegate = self
         cropper.picker = nil
         cropper.image = UIImage(named: "image")
